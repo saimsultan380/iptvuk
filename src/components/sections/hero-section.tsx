@@ -106,7 +106,7 @@ export function HeroSection() {
       {/* ═══════════════════════════════════════════════════════════════════
           HERO CONTENT
       ═══════════════════════════════════════════════════════════════════ */}
-      <Container className="relative z-10 pb-0 pt-32 text-center sm:pt-36">
+      <Container className="relative z-10 pb-0 pt-28 text-center sm:pt-32">
         {/* Badge */}
         <FadeIn delay={0.05}>
           <div
@@ -128,7 +128,7 @@ export function HeroSection() {
 
         {/* Headline */}
         <SkewedTextReveal
-          className="mx-auto max-w-[900px] text-[34px] font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-[52px] lg:text-[58px]"
+          className="mx-auto max-w-[900px] text-[33px] font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-[52px] lg:text-[58px]"
           style={{ color: "var(--hero-heading)" }}
         >
           IPTV UK —{" "}
@@ -141,7 +141,7 @@ export function HeroSection() {
         {/* Body paragraph */}
         <FadeIn delay={0.2}>
           <p
-            className="mx-auto mt-6 max-w-[660px] text-[15px] leading-[1.75] sm:text-base"
+            className="mx-auto mt-6 max-w-[660px] text-[14px] leading-[1.75] sm:text-base"
             style={{ color: "var(--hero-muted)" }}
           >
             You are overpaying for TV. Every single month. A package full of
