@@ -4,8 +4,10 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import {
   SITE_DESCRIPTION,
+  SITE_FAVICON_PATH,
   SITE_LOGO_PATH,
   SITE_NAME,
+  SITE_OG_IMAGE,
   SITE_OG_IMAGE_PATH,
   SITE_URL,
 } from "@/lib/site";
@@ -53,10 +55,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: SITE_OG_IMAGE_PATH,
-        width: 1536,
-        height: 1024,
-        alt: `${SITE_NAME} — UK IPTV streaming`,
+        url: SITE_OG_IMAGE.url,
+        width: SITE_OG_IMAGE.width,
+        height: SITE_OG_IMAGE.height,
+        alt: SITE_OG_IMAGE.alt,
       },
     ],
   },
@@ -68,11 +70,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+      { url: SITE_FAVICON_PATH, sizes: "any" },
+      { url: SITE_LOGO_PATH, type: "image/png", sizes: "512x512" },
     ],
     apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
-    shortcut: "/favicon.ico",
+    shortcut: SITE_FAVICON_PATH,
   },
   robots: {
     index: true,
@@ -92,14 +94,31 @@ const jsonLd = [
     url: `${SITE_URL}/`,
     description: SITE_DESCRIPTION,
     inLanguage: "en-GB",
+    image: `${SITE_URL}${SITE_LOGO_PATH}`,
+    publisher: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}${SITE_LOGO_PATH}`,
+        width: 512,
+        height: 512,
+      },
+    },
   },
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: SITE_NAME,
+    alternateName: ["IPTV UK", "UK-Best-IPTV", "UK IPTV"],
     url: `${SITE_URL}/`,
-    logo: `${SITE_URL}${SITE_LOGO_PATH}`,
-    image: `${SITE_URL}${SITE_LOGO_PATH}`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${SITE_URL}${SITE_LOGO_PATH}`,
+      width: 512,
+      height: 512,
+    },
+    image: `${SITE_URL}${SITE_OG_IMAGE_PATH}`,
     contactPoint: {
       "@type": "ContactPoint",
       email: "support@best-iptv.co",

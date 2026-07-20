@@ -5,9 +5,17 @@ export const SITE_URL = "https://best-iptv.co";
 
 export const SITE_NAME = "Best IPTV";
 
+/** Primary brand mark — used in UI, schema, favicon, and social previews */
 export const SITE_LOGO_PATH = "/icon.png";
 export const SITE_FAVICON_PATH = "/favicon.ico";
-export const SITE_OG_IMAGE_PATH = "/uk-iptv.PNG";
+/** Open Graph / Twitter / Google link preview image (same logo, social size) */
+export const SITE_OG_IMAGE_PATH = "/og-image.png";
+export const SITE_OG_IMAGE = {
+  url: SITE_OG_IMAGE_PATH,
+  width: 1200,
+  height: 630,
+  alt: `${SITE_NAME} — UK IPTV streaming`,
+} as const;
 
 export const SITE_DESCRIPTION =
   "Get the best IPTV subscription in the UK. Stream 20,000+ live channels, 60,000+ VOD movies, and series in true 4K quality with no contract and instant activation.";
@@ -32,10 +40,10 @@ export function canonicalUrl(path: string = "/"): string {
 }
 
 const DEFAULT_OG_IMAGE = {
-  url: SITE_OG_IMAGE_PATH,
-  width: 1536,
-  height: 1024,
-  alt: `${SITE_NAME} — UK IPTV streaming`,
+  url: SITE_OG_IMAGE.url,
+  width: SITE_OG_IMAGE.width,
+  height: SITE_OG_IMAGE.height,
+  alt: SITE_OG_IMAGE.alt,
 };
 
 export function createPageMetadata({

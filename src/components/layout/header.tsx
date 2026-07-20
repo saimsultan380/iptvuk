@@ -38,22 +38,28 @@ export function Header() {
             boxShadow: "var(--hero-nav-shadow)",
           }}
         >
-          {/* Logo — image only, no accompanying text */}
+          {/* Logo */}
           <Link
             href="/"
             id="hero-logo"
-            className="flex shrink-0 items-center no-underline"
+            className="flex shrink-0 items-center gap-2 no-underline sm:gap-2.5"
             onClick={closeMenu}
-            aria-label="Best IPTV home"
+            aria-label="IPTV UK home"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/icon.png"
-              alt="Best IPTV"
+              alt=""
               width={66}
               height={66}
-              className="h-11 w-11 object-contain sm:h-[66px] sm:w-[66px]"
+              className="h-10 w-10 object-contain sm:h-[66px] sm:w-[66px]"
             />
+            <span
+              className="text-base font-bold tracking-tight sm:text-lg"
+              style={{ color: "var(--hero-nav-text)" }}
+            >
+              IPTV UK
+            </span>
           </Link>
 
           {/* Nav links + actions */}

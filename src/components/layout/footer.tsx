@@ -58,17 +58,23 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="inline-flex items-center no-underline"
-              aria-label="Best IPTV home"
+              className="inline-flex items-center gap-2.5 no-underline"
+              aria-label="IPTV UK home"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/icon.png"
-                alt="Best IPTV"
+                alt=""
                 width={66}
                 height={66}
                 className="h-[66px] w-[66px] object-contain"
               />
+              <span
+                className="text-lg font-bold tracking-tight"
+                style={{ color: "var(--footer-heading)" }}
+              >
+                IPTV UK
+              </span>
             </Link>
 
             <p
