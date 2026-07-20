@@ -288,7 +288,7 @@ export function FeaturesSection() {
           <div className="mt-12 flex justify-center md:mt-16">
             <a
               href="#"
-              className="group flex items-center gap-2.5 rounded-xl px-8 py-3.5 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
+              className="cta-shine group flex items-center gap-2.5 rounded-xl px-8 py-3.5 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "var(--hero-cta-primary-shadow)",

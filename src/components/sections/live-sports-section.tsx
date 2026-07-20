@@ -158,7 +158,7 @@ export function LiveSportsSection() {
           <div className="mt-10 flex justify-center md:mt-12">
             <a
               href="#"
-              className="flex items-center gap-3 rounded-xl px-8 py-4 text-base font-bold text-white transition-all duration-200 hover:brightness-110"
+              className="cta-shine flex items-center gap-3 rounded-xl px-8 py-4 text-base font-bold text-white transition-all duration-200 hover:brightness-110"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "var(--hero-cta-primary-shadow)",

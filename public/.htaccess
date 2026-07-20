@@ -1,0 +1,21 @@
+# Apache — force HTTPS + non-www + trailing slash (static export)
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # HTTP → HTTPS
+  RewriteCond %{HTTPS} !=on
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # WWW → non-WWW
+  RewriteCond %{HTTP_HOST} ^www\.best-iptv\.co$ [NC]
+  RewriteRule ^ https://best-iptv.co%{REQUEST_URI} [L,R=301]
+
+  # Add trailing slash to extensionless paths (skip files)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_URI} !\.
+  RewriteCond %{REQUEST_URI} !(.*)/$
+  RewriteRule ^(.*)$ /$1/ [L,R=301]
+</IfModule>
+
+# Serve custom 404 for unknown routes
+ErrorDocument 404 /404.html

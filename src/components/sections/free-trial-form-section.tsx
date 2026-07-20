@@ -245,7 +245,7 @@ export function FreeTrialFormSection() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex w-full items-center justify-center gap-2.5 rounded-xl px-6 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 disabled:opacity-70 sm:text-[15px]"
+                  className="cta-shine flex w-full items-center justify-center gap-2.5 rounded-xl px-6 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 disabled:opacity-70 sm:text-[15px]"
                   style={{
                     background: "var(--hero-cta-primary-bg)",
                     boxShadow: "var(--hero-cta-primary-shadow)",

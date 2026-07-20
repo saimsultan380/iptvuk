@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
+import { SkewedTextReveal } from "@/components/animation/skewed-text-reveal";
 
 const FEATURE_PILLS = [
   { label: "5-Minute Setup", Icon: Zap },
@@ -106,16 +107,14 @@ export function ResellerPanelHero() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.12}>
-          <h1
-            className="mx-auto max-w-[920px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
-            style={{ color: "var(--hero-heading)" }}
-          >
-            IPTV Reseller UK — Start Your Own{" "}
-            <span style={{ color: "var(--hero-accent)" }}>IPTV Business</span>{" "}
-            in Minutes
-          </h1>
-        </FadeIn>
+        <SkewedTextReveal
+          className="mx-auto max-w-[920px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
+          style={{ color: "var(--hero-heading)" }}
+        >
+          IPTV Reseller UK — Start Your Own{" "}
+          <span style={{ color: "var(--hero-accent)" }}>IPTV Business</span>{" "}
+          in Minutes
+        </SkewedTextReveal>
 
         <FadeIn delay={0.18}>
           <p
@@ -153,7 +152,7 @@ export function ResellerPanelHero() {
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href="#reseller-plans"
-              className="flex w-full max-w-xs items-center justify-center gap-2.5 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:w-auto sm:max-w-none sm:text-[15px]"
+              className="cta-shine flex w-full max-w-xs items-center justify-center gap-2.5 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:w-auto sm:max-w-none sm:text-[15px]"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "var(--hero-cta-primary-shadow)",

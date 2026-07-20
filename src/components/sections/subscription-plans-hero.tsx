@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
+import { SkewedTextReveal } from "@/components/animation/skewed-text-reveal";
 
 const FEATURE_PILLS = [
   { label: "Instant Activation", Icon: Zap },
@@ -109,16 +110,14 @@ export function SubscriptionPlansHero() {
           </div>
         </FadeIn>
 
-        <FadeIn delay={0.12}>
-          <h1
-            className="mx-auto max-w-[920px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
-            style={{ color: "var(--hero-heading)" }}
-          >
-            IPTV Subscription UK —{" "}
-            <span style={{ color: "var(--hero-accent)" }}>12,000+</span>{" "}
-            Channels, Multi-Connection Plans, Free Trial
-          </h1>
-        </FadeIn>
+        <SkewedTextReveal
+          className="mx-auto max-w-[920px] text-3xl font-bold leading-[1.12] tracking-tight sm:text-4xl md:text-[48px] lg:text-[54px]"
+          style={{ color: "var(--hero-heading)" }}
+        >
+          IPTV Subscription UK —{" "}
+          <span style={{ color: "var(--hero-accent)" }}>12,000+</span>{" "}
+          Channels, Multi-Connection Plans, Free Trial
+        </SkewedTextReveal>
 
         <FadeIn delay={0.18}>
           <p
@@ -174,7 +173,7 @@ export function SubscriptionPlansHero() {
 
             <a
               href="#free-trial"
-              className="flex w-full max-w-xs items-center justify-center gap-2.5 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:w-auto sm:max-w-none sm:text-[15px]"
+              className="cta-shine flex w-full max-w-xs items-center justify-center gap-2.5 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:w-auto sm:max-w-none sm:text-[15px]"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "var(--hero-cta-primary-shadow)",

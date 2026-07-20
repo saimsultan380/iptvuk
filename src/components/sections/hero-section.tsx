@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { FadeIn } from "@/components/animation/fade-in";
 import { ScrollReveal } from "@/components/animation/scroll-reveal";
+import { SkewedTextReveal } from "@/components/animation/skewed-text-reveal";
 import { Play, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -35,17 +35,26 @@ function BlueDot({ className }: { className?: string }) {
   );
 }
 
-function FeaturePill({ label }: { label: string }) {
+function FeaturePill({
+  label,
+  className,
+}: {
+  label: string;
+  className?: string;
+}) {
   return (
     <span
-      className="flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-medium backdrop-blur-sm"
+      className={cn(
+        "flex items-center justify-center gap-1.5 rounded-full border px-2.5 py-1 text-[10px] font-medium backdrop-blur-sm sm:gap-2 sm:px-4 sm:py-1.5 sm:text-xs",
+        className,
+      )}
       style={{
         borderColor: "var(--hero-pill-border)",
         backgroundColor: "var(--hero-pill-bg)",
         color: "var(--hero-pill-text)",
       }}
     >
-      <BlueDot />
+      <BlueDot className="h-1 w-1 sm:h-1.5 sm:w-1.5" />
       {label}
     </span>
   );
@@ -118,18 +127,16 @@ export function HeroSection() {
         </FadeIn>
 
         {/* Headline */}
-        <FadeIn delay={0.12}>
-          <h1
-            className="mx-auto max-w-[900px] text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-[52px] lg:text-[58px]"
-            style={{ color: "var(--hero-heading)" }}
-          >
-            IPTV UK —{" "}
-            <span style={{ color: "var(--hero-accent)" }}>20,000+</span>{" "}
-            Channels, True{" "}
-            <span style={{ color: "var(--hero-accent)" }}>4K</span>, No
-            Contract, Instant Activation
-          </h1>
-        </FadeIn>
+        <SkewedTextReveal
+          className="mx-auto max-w-[900px] text-[34px] font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-[52px] lg:text-[58px]"
+          style={{ color: "var(--hero-heading)" }}
+        >
+          IPTV UK —{" "}
+          <span style={{ color: "var(--hero-accent)" }}>20,000+</span>{" "}
+          Channels, True{" "}
+          <span style={{ color: "var(--hero-accent)" }}>4K</span>, No
+          Contract, Instant Activation
+        </SkewedTextReveal>
 
         {/* Body paragraph */}
         <FadeIn delay={0.2}>
@@ -161,11 +168,18 @@ export function HeroSection() {
           </p>
         </FadeIn>
 
-        {/* Feature pills */}
+        {/* Feature pills — 2 per row on mobile, wrap freely on desktop */}
         <FadeIn delay={0.28}>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
-            {FEATURE_PILLS.map((pill) => (
-              <FeaturePill key={pill} label={pill} />
+          <div className="mx-auto mt-8 grid max-w-sm grid-cols-2 gap-1.5 sm:flex sm:max-w-none sm:flex-wrap sm:items-center sm:justify-center sm:gap-2">
+            {FEATURE_PILLS.map((pill, index) => (
+              <FeaturePill
+                key={pill}
+                label={pill}
+                className={cn(
+                  index === FEATURE_PILLS.length - 1 &&
+                    "col-span-2 mx-auto w-fit sm:col-span-1 sm:mx-0 sm:w-auto",
+                )}
+              />
             ))}
           </div>
         </FadeIn>
@@ -177,7 +191,7 @@ export function HeroSection() {
             <a
               href="#"
               id="hero-cta-primary"
-              className="group flex items-center gap-2.5 rounded-xl px-7 py-3.5 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
+              className="cta-shine group flex items-center gap-2.5 rounded-xl px-7 py-3.5 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "var(--hero-cta-primary-shadow)",

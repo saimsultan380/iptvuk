@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
@@ -13,12 +12,14 @@ import { ResellerProfitabilitySection } from "@/components/sections/reseller-pro
 import { ResellerCustomersSection } from "@/components/sections/reseller-customers-section";
 import { ResellerFaqSection } from "@/components/sections/reseller-faq-section";
 import { ResellerCtaSection } from "@/components/sections/reseller-cta-section";
+import { createPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "IPTV Reseller UK — Reseller Panel, Credits & White Label | IPTV UK",
+export const metadata = createPageMetadata({
+  title: "IPTV Reseller UK — Reseller Panel, Credits & White Label",
   description:
     "Start your IPTV reseller business in minutes. Buy credits from £1.50, non-expiring balance, instant panel activation, white label branding, and 24/7 reseller support.",
-};
+  path: "/reseller-panel/",
+});
 
 export default function ResellerPanelPage() {
   return (

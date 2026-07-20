@@ -8,10 +8,10 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Subscription Plan", href: "/subscription-plans" },
-  { label: "Installation Guide", href: "/installation-guide" },
-  { label: "Reseller Panel", href: "/reseller-panel" },
-  { label: "Contact Us", href: "/free-trial#contact" },
+  { label: "Subscription Plan", href: "/subscription-plans/" },
+  { label: "Installation Guide", href: "/installation-guide/" },
+  { label: "Reseller Panel", href: "/reseller-panel/" },
+  { label: "Contact Us", href: "/free-trial/#contact" },
 ];
 
 export function Header() {
@@ -28,37 +28,32 @@ export function Header() {
 
   return (
     <>
-      <header className="pointer-events-none fixed left-0 right-0 top-0 z-[80] px-4 pt-5 sm:px-6 lg:px-8">
+      <header className="pointer-events-none fixed left-0 right-0 top-0 z-[80] px-3 pt-3 sm:px-6 sm:pt-5 lg:px-8">
         <nav
           aria-label="Main navigation"
-          className="pointer-events-auto relative mx-auto flex max-w-5xl items-center justify-between gap-4 rounded-2xl border px-4 py-2.5 backdrop-blur-xl sm:px-5 sm:py-3 lg:max-w-6xl"
+          className="pointer-events-auto relative mx-auto flex max-w-5xl items-center justify-between gap-3 rounded-2xl border py-1.5 pl-1 pr-3 backdrop-blur-xl sm:gap-4 sm:py-2.5 sm:pl-2 sm:pr-5 lg:max-w-6xl"
           style={{
             borderColor: "var(--hero-nav-border)",
             backgroundColor: "var(--hero-nav-bg)",
             boxShadow: "var(--hero-nav-shadow)",
           }}
         >
-          {/* Logo */}
+          {/* Logo — image only, no accompanying text */}
           <Link
             href="/"
             id="hero-logo"
-            className="flex shrink-0 items-center gap-2.5 no-underline"
+            className="-ml-1.5 flex shrink-0 items-center justify-start no-underline sm:-ml-2.5"
             onClick={closeMenu}
+            aria-label="Best IPTV home"
           >
-            <div
-              className="flex h-9 w-9 items-center justify-center rounded-xl shadow-[0_4px_16px_rgba(0,163,255,0.35)]"
-              style={{
-                background: "linear-gradient(135deg, #00a3ff 0%, #0066cc 100%)",
-              }}
-            >
-              <span className="text-[15px] font-bold text-white">W</span>
-            </div>
-            <span
-              className="text-base font-bold tracking-tight"
-              style={{ color: "var(--hero-nav-text)" }}
-            >
-              IPTV UK
-            </span>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo.png"
+              alt="Best IPTV"
+              width={132}
+              height={88}
+              className="h-14 w-auto object-contain object-left sm:h-[70px] md:h-20 lg:h-[88px]"
+            />
           </Link>
 
           {/* Nav links + actions */}
@@ -96,9 +91,9 @@ export function Header() {
 
             {/* Desktop CTA */}
             <Link
-              href="/free-trial"
+              href="/free-trial/"
               id="hero-get-started"
-              className="hidden shrink-0 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-[0_0_20px_rgba(0,163,255,0.45)] transition-all duration-200 hover:shadow-[0_0_28px_rgba(0,163,255,0.6)] hover:brightness-110 sm:px-5 md:inline-flex"
+              className="cta-shine hidden shrink-0 rounded-full px-4 py-2 text-sm font-semibold text-white shadow-[0_0_20px_rgba(0,163,255,0.45)] transition-all duration-200 hover:shadow-[0_0_28px_rgba(0,163,255,0.6)] hover:brightness-110 sm:px-5 md:inline-flex"
               style={{
                 background: "linear-gradient(135deg, #00a3ff 0%, #0066cc 100%)",
               }}
@@ -126,7 +121,7 @@ export function Header() {
 
             <motion.nav
               aria-label="Mobile navigation"
-              className="fixed left-0 right-0 top-0 z-[75] border-b px-4 pb-8 pt-[5.5rem] shadow-2xl sm:px-6 md:hidden"
+              className="fixed left-0 right-0 top-0 z-[75] border-b px-4 pb-8 pt-24 shadow-2xl sm:px-6 md:hidden"
               style={{
                 borderColor: "var(--hero-nav-border)",
                 backgroundColor: "var(--hero-nav-bg)",
@@ -162,8 +157,8 @@ export function Header() {
                   className="mt-4 px-4"
                 >
                   <Link
-                    href="/free-trial"
-                    className="flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(0,163,255,0.45)] transition-all duration-200 hover:brightness-110"
+                    href="/free-trial/"
+                    className="cta-shine flex w-full items-center justify-center rounded-full px-5 py-3 text-sm font-semibold text-white shadow-[0_0_20px_rgba(0,163,255,0.45)] transition-all duration-200 hover:brightness-110"
                     style={{
                       background:
                         "linear-gradient(135deg, #00a3ff 0%, #0066cc 100%)",

@@ -187,7 +187,7 @@ export function FreeTrialHowItWorksSection() {
           <div className="mt-8 flex justify-center md:mt-14">
             <Link
               href="#trial-form"
-              className="flex w-full max-w-sm items-center justify-center gap-2.5 rounded-xl px-6 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:w-auto sm:max-w-none sm:gap-3 sm:px-8 sm:py-4 sm:text-base"
+              className="cta-shine flex w-full max-w-sm items-center justify-center gap-2.5 rounded-xl px-6 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:w-auto sm:max-w-none sm:gap-3 sm:px-8 sm:py-4 sm:text-base"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "var(--hero-cta-primary-shadow)",

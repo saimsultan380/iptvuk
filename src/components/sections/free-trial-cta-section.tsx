@@ -105,7 +105,7 @@ export function FreeTrialCtaSection({
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-10">
               <Link
                 href="/free-trial"
-                className="flex items-center gap-2.5 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:text-[15px]"
+                className="cta-shine flex items-center gap-2.5 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:text-[15px]"
                 style={{
                   background: "var(--hero-cta-primary-bg)",
                   boxShadow: "var(--hero-cta-primary-shadow)",

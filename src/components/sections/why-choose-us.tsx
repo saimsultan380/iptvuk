@@ -278,7 +278,7 @@ export function WhyChooseUs() {
             <a
               href="#"
               id="why-cta-button"
-              className="flex w-full shrink-0 items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:w-auto"
+              className="cta-shine flex w-full shrink-0 items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:w-auto"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "var(--hero-cta-primary-shadow)",

@@ -1,0 +1,4 @@
+# Netlify / compatible static hosts — force non-www + HTTPS canonical host
+https://www.best-iptv.co/*  https://best-iptv.co/:splat  301!
+http://www.best-iptv.co/*   https://best-iptv.co/:splat  301!
+http://best-iptv.co/*       https://best-iptv.co/:splat  301!

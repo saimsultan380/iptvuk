@@ -1,0 +1,11 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.best-iptv.co" }],
+      "destination": "https://best-iptv.co/:path*",
+      "permanent": true
+    }
+  ],
+  "trailingSlash": true
+}

@@ -99,7 +99,7 @@ export function SubscriptionCtaSection() {
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row md:mt-12">
               <Link
                 href="#multi-connection"
-                className="flex items-center gap-2.5 rounded-xl px-8 py-4 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
+                className="cta-shine flex items-center gap-2.5 rounded-xl px-8 py-4 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
                 style={{
                   background: "var(--hero-cta-primary-bg)",
                   boxShadow: "var(--hero-cta-primary-shadow)",

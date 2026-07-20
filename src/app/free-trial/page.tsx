@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
@@ -9,12 +8,14 @@ import { FreeTrialDevicesSection } from "@/components/sections/free-trial-device
 import { FreeTrialSupportSection } from "@/components/sections/free-trial-support-section";
 import { FreeTrialFaqSection } from "@/components/sections/free-trial-faq-section";
 import { FreeTrialPageCtaSection } from "@/components/sections/free-trial-page-cta-section";
+import { createPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "IPTV Free Trial UK — 24 Hours Full Access, No Card | IPTV UK",
+export const metadata = createPageMetadata({
+  title: "IPTV Free Trial UK — 24 Hours Full Access, No Card",
   description:
     "Claim your free 24-hour IPTV trial UK. Full access to live channels, sports, and on-demand content. No credit card, no obligation. Login details sent within minutes.",
-};
+  path: "/free-trial/",
+});
 
 export default function FreeTrialPage() {
   return (

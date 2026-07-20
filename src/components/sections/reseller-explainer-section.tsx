@@ -142,7 +142,7 @@ export function ResellerExplainerSection() {
             <div className="mt-8 flex justify-center">
               <Link
                 href="#reseller-plans"
-                className="inline-flex items-center gap-2 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:text-[15px]"
+                className="cta-shine inline-flex items-center gap-2 rounded-xl px-7 py-3.5 text-sm font-bold text-white transition-all duration-200 hover:brightness-110 sm:text-[15px]"
                 style={{
                   background: "var(--hero-cta-primary-bg)",
                   boxShadow: "var(--hero-cta-primary-shadow)",

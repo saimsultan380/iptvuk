@@ -140,7 +140,7 @@ function PricingCard({
         {isPopular && (
           <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
             <div
-              className="rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white"
+              className="cta-shine rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "0 4px 12px rgba(0, 163, 255, 0.3)",
@@ -189,7 +189,7 @@ function PricingCard({
           {features.map((feature, i) => (
             <li key={i} className="flex items-start gap-3 text-[14px]">
               <Check
-                className="mt-0.5 h-4 w-4 shrink-0"
+                className="cta-shine mt-0.5 h-4 w-4 shrink-0"
                 style={{ color: "var(--hero-accent)" }}
                 strokeWidth={2.5}
               />
@@ -310,7 +310,7 @@ export function PricingSection() {
               onClick={() => setIsPremium(!isPremium)}
               aria-pressed={isPremium}
             >
-              <span className="sr-only">Toggle premium plan</span>
+              <span className="cta-shine sr-only">Toggle premium plan</span>
               <span
                 className={`inline-block h-5 w-5 transform rounded-full transition-transform duration-200 ease-in-out ${
                   isPremium ? "translate-x-8" : "translate-x-1"
@@ -358,7 +358,7 @@ export function PricingSection() {
             </p>
             <a
               href="#"
-              className="inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
+              className="cta-shine inline-flex items-center justify-center gap-2 rounded-xl px-7 py-3.5 text-[15px] font-bold text-white transition-all duration-200 hover:brightness-110"
               style={{
                 background: "var(--hero-cta-primary-bg)",
                 boxShadow: "var(--hero-cta-primary-shadow)",

@@ -5,16 +5,16 @@ import { Mail, MessageCircle } from "lucide-react";
 const FOOTER_LINKS = {
   service: [
     { label: "Home", href: "/" },
-    { label: "Subscription Plan", href: "/subscription-plans" },
-    { label: "Installation Guide", href: "/installation-guide" },
-    { label: "Reseller Panel", href: "/reseller-panel" },
-    { label: "Contact Us", href: "/free-trial#contact" },
+    { label: "Subscription Plan", href: "/subscription-plans/" },
+    { label: "Installation Guide", href: "/installation-guide/" },
+    { label: "Reseller Panel", href: "/reseller-panel/" },
+    { label: "Contact Us", href: "/free-trial/#contact" },
   ],
   support: [
-    { label: "Pricing Plans", href: "/subscription-plans#pricing" },
-    { label: "Free Trial", href: "/free-trial" },
-    { label: "Device Compatibility", href: "#devices" },
-    { label: "FAQ", href: "#faq" },
+    { label: "Pricing Plans", href: "/subscription-plans/#pricing" },
+    { label: "Free Trial", href: "/free-trial/" },
+    { label: "Device Compatibility", href: "/#devices" },
+    { label: "FAQ", href: "/#faq" },
   ],
   legal: [
     { label: "Privacy Policy", href: "#" },
@@ -56,21 +56,19 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr] lg:gap-16">
           {/* Brand column */}
           <div>
-            <Link href="/" className="inline-flex items-center gap-2.5 no-underline">
-              <div
-                className="flex h-9 w-9 items-center justify-center rounded-xl shadow-[0_4px_16px_rgba(0,163,255,0.35)]"
-                style={{
-                  background: "linear-gradient(135deg, #00a3ff 0%, #0066cc 100%)",
-                }}
-              >
-                <span className="text-[15px] font-bold text-white">W</span>
-              </div>
-              <span
-                className="text-base font-bold tracking-tight"
-                style={{ color: "var(--footer-heading)" }}
-              >
-                IPTV UK
-              </span>
+            <Link
+              href="/"
+              className="-ml-3 inline-flex items-center justify-start no-underline sm:-ml-4"
+              aria-label="Best IPTV home"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/logo.png"
+                alt="Best IPTV"
+                width={132}
+                height={88}
+                className="h-[72px] w-auto object-contain object-left sm:h-[88px]"
+              />
             </Link>
 
             <p
@@ -113,12 +111,12 @@ export function Footer() {
                 aria-hidden
               />
               <a
-                href="mailto:support@iptvuk.co.uk"
+                href="mailto:support@best-iptv.co"
                 className="inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-[var(--hero-accent)]"
                 style={{ color: "var(--footer-link)" }}
               >
                 <Mail className="h-4 w-4" aria-hidden />
-                support@iptvuk.co.uk
+                support@best-iptv.co
               </a>
             </div>
           </div>
@@ -161,13 +159,13 @@ export function Footer() {
           style={{ borderColor: "var(--footer-border)" }}
         >
           <p className="text-xs" style={{ color: "var(--footer-muted)" }}>
-            © {year} IPTV UK. All rights reserved.
+            © {year} Best IPTV. All rights reserved.
           </p>
           <p
             className="max-w-xl text-xs leading-relaxed md:text-right"
             style={{ color: "var(--footer-muted)" }}
           >
-            IPTV UK is an independent streaming service provider. Channel
+            Best IPTV is an independent streaming service provider. Channel
             availability may vary. Use responsibly and in accordance with local
             regulations.
           </p>

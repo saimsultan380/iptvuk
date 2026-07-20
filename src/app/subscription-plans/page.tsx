@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { FloatingWhatsApp } from "@/components/floating-whatsapp";
@@ -14,12 +13,14 @@ import { SubscriptionReviewsSection } from "@/components/sections/subscription-r
 import { FreeTrialCtaSection } from "@/components/sections/free-trial-cta-section";
 import { SubscriptionFaqSection } from "@/components/sections/subscription-faq-section";
 import { SubscriptionCtaSection } from "@/components/sections/subscription-cta-section";
+import { createPageMetadata } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "IPTV Subscription UK — Plans, Pricing & Free Trial | IPTV UK",
+export const metadata = createPageMetadata({
+  title: "IPTV Subscription UK — Plans, Pricing & Free Trial",
   description:
     "Compare IPTV subscription UK plans with 12,000+ channels, multi-connection options, instant activation, and a free 24-hour trial. No contract. No auto-billing.",
-};
+  path: "/subscription-plans/",
+});
 
 export default function SubscriptionPlansPage() {
   return (
