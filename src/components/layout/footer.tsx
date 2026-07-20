@@ -58,16 +58,16 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="-ml-3 inline-flex items-center justify-start no-underline sm:-ml-4"
+              className="inline-flex items-center no-underline"
               aria-label="Best IPTV home"
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/logo.png"
+                src="/icon.png"
                 alt="Best IPTV"
-                width={132}
-                height={88}
-                className="h-[72px] w-auto object-contain object-left sm:h-[88px]"
+                width={66}
+                height={66}
+                className="h-[66px] w-[66px] object-contain"
               />
             </Link>
 

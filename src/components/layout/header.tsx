@@ -31,7 +31,7 @@ export function Header() {
       <header className="pointer-events-none fixed left-0 right-0 top-0 z-[80] px-3 pt-3 sm:px-6 sm:pt-5 lg:px-8">
         <nav
           aria-label="Main navigation"
-          className="pointer-events-auto relative mx-auto flex max-w-5xl items-center justify-between gap-3 rounded-2xl border py-1.5 pl-1 pr-3 backdrop-blur-xl sm:gap-4 sm:py-2.5 sm:pl-2 sm:pr-5 lg:max-w-6xl"
+          className="pointer-events-auto relative mx-auto flex max-w-5xl items-center justify-between gap-3 rounded-2xl border px-3 py-1.5 backdrop-blur-xl sm:gap-4 sm:px-4 sm:py-2 lg:max-w-6xl"
           style={{
             borderColor: "var(--hero-nav-border)",
             backgroundColor: "var(--hero-nav-bg)",
@@ -42,17 +42,17 @@ export function Header() {
           <Link
             href="/"
             id="hero-logo"
-            className="-ml-1.5 flex shrink-0 items-center justify-start no-underline sm:-ml-2.5"
+            className="flex shrink-0 items-center no-underline"
             onClick={closeMenu}
             aria-label="Best IPTV home"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/logo.png"
+              src="/icon.png"
               alt="Best IPTV"
-              width={132}
-              height={88}
-              className="h-14 w-auto object-contain object-left sm:h-[70px] md:h-20 lg:h-[88px]"
+              width={66}
+              height={66}
+              className="h-11 w-11 object-contain sm:h-[66px] sm:w-[66px]"
             />
           </Link>
 

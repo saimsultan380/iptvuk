@@ -6,6 +6,7 @@ import {
   SITE_DESCRIPTION,
   SITE_LOGO_PATH,
   SITE_NAME,
+  SITE_OG_IMAGE_PATH,
   SITE_URL,
 } from "@/lib/site";
 
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.png",
+        url: SITE_OG_IMAGE_PATH,
         width: 1536,
         height: 1024,
         alt: `${SITE_NAME} — UK IPTV streaming`,
@@ -63,12 +64,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: defaultTitle,
     description: SITE_DESCRIPTION,
-    images: ["/og-image.png"],
+    images: [SITE_OG_IMAGE_PATH],
   },
   icons: {
-    icon: [{ url: SITE_LOGO_PATH, type: "image/png" }],
-    apple: [{ url: SITE_LOGO_PATH, type: "image/png" }],
-    shortcut: SITE_LOGO_PATH,
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+    shortcut: "/favicon.ico",
   },
   robots: {
     index: true,
